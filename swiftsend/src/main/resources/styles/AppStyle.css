@@ -1,0 +1,24 @@
+
+.root
+{
+    -fx-padding: 20px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 15px;
+    -fx-background-color: #eff2fa;
+    -fx-background-radius: 15px;
+}
+
+.custom-input {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 1;
+    -fx-background-insets: 0;
+    -fx-padding: 8 12;
+    -fx-font-size: 14px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+     /* -fx-border-color: #020202; */
+
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
