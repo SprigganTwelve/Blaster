@@ -1,7 +1,10 @@
 c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\App.java
 c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\components\ui\CustomSVGImage.java
-c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\components\ui\ExpandedSearchBar.java
-c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\components\ui\MediaHub.java
-c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\components\ui\SideBar.java
+c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\layouts\ExpandedSearchBar.java
+c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\layouts\QuickAccessBar.java
+c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\layouts\RecentSentFiles.java
+c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\layouts\SideBar.java
+c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\templates\MediaHub.java
 c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\utils\ChildFirstClassLoader.java
+c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\utils\GlobalKeyListenner.java
 c:\About_Me\Ecole\softwareProjects\projects\Javafx\Blaster\swiftsend\src\main\java\com\wireghost\utils\ImageUtil.java

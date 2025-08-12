@@ -22,3 +22,12 @@
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
 }
+
+.dashoffset-border{
+    -fx-border-insets: 0;
+    -fx-border-radius: 1px;
+    -fx-border-color: "black";
+    -fx-border-style: "dashed";
+    -fx-border-width: 5px;
+    -fx-border-dash-array: 10 5;
+}

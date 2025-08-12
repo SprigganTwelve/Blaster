@@ -1,6 +1,7 @@
-package com.wireghost;
+package com.wireghost.layouts;
 
 
+import com.wireghost.components.ui.CustomSVGImage;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -18,8 +19,8 @@ import javafx.scene.text.Font;
 public final class ExpandedSearchBar extends HBox {
 
     public TextField textField;
-    public final double[] PADDING = { 2, 8, 2, 8 } ; // top, right, bottom, left 
     public final double PREF_MARGIN = 15;
+    public final static  double[] PADDING = { 2, 8, 2, 8 } ; // top, right, bottom, left 
 
 
     //---------constructors
@@ -81,8 +82,12 @@ public final class ExpandedSearchBar extends HBox {
         );
 
         this.getChildren().addAll(
-            input, searchIcon.getScaledImageView(25.0, 25.0)
+            input, searchIcon.getScaledNode(25.0, 25.0)
         );
+    }
+
+    public double getPrefMargin() {
+        return PREF_MARGIN;
     }
 
 }

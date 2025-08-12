@@ -1,4 +1,4 @@
-package com.wireghost;
+package com.wireghost.components.ui;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -23,8 +23,10 @@ public class CustomSVGImage {
 
     public boolean activate; // define a behaviour when the svg is click
 
+    private Pane pane;
     private Cursor cursor;
     private final String svgPath;
+    private  ImageView imageView;
  
     public CustomSVGImage(String svgPath) {
         this.svgPath = svgPath;
@@ -44,7 +46,12 @@ public class CustomSVGImage {
         this.activate = activate;
     }
 
-    public Node getScaledImageView(double width, double height) {
+    public ImageView getImageView(){
+        return imageView;
+    }
+    
+
+    public Node getScaledNode(double width, double height) {
 
         try (InputStream svgStream = getClass().getResourceAsStream(svgPath)) {
             if (svgStream == null) {
@@ -60,21 +67,22 @@ public class CustomSVGImage {
             transcoder.addTranscodingHint(PNGTranscoder.KEY_WIDTH, (float) width);
             transcoder.addTranscodingHint(PNGTranscoder.KEY_HEIGHT, (float) height);
 
-            transcoder.transcode(input, output);
-
             ByteArrayInputStream pngInputStream = new ByteArrayInputStream(outputStream.toByteArray());
             Image fxImage = new Image(pngInputStream);
 
-            ImageView imageView = new ImageView(fxImage);
+            imageView = new ImageView(fxImage);
             imageView.setFitWidth(width);
             imageView.setFitHeight(height);
             imageView.setPreserveRatio(true);
 
             if(this.cursor != null){
                 
-                Pane pane = new Pane(imageView);
-                pane.setPrefSize(width, height);
+                pane = new Pane(imageView);
                 pane.setCursor(this.cursor);
+
+                imageView.layoutXProperty().bind(pane.widthProperty().subtract(imageView.fitWidthProperty()).divide(2));
+                imageView.layoutYProperty().bind(pane.heightProperty().subtract(imageView.fitHeightProperty()).divide(2));
+
 
                 if (activate) {
                     pane.setBackground(new Background(
@@ -82,12 +90,14 @@ public class CustomSVGImage {
                             Color.rgb(65, 62, 62, 1),
                             new CornerRadii(10.15),
                             new Insets(6.0)
-                        )
+                        )   
                     ));
                 }
 
                 return pane;
             }
+
+            transcoder.transcode(input, output);
 
             return imageView;
 
@@ -96,5 +106,10 @@ public class CustomSVGImage {
             e.printStackTrace();
             return new ImageView(); // empty fallback
         }
+    }
+
+    public Pane getPane()
+    {
+        return  pane;
     }
 }

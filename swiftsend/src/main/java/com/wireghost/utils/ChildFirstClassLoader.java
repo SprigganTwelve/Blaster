@@ -1,4 +1,4 @@
-package com.wireghost;
+package com.wireghost.utils;
 
 
 import java.net.URL;

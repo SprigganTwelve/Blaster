@@ -1,8 +1,11 @@
+com\wireghost\utils\ChildFirstClassLoader.class
 com\wireghost\App$1.class
-com\wireghost\MediaHub.class
-com\wireghost\ChildFirstClassLoader.class
-com\wireghost\SideBar.class
+com\wireghost\layouts\QuickAccessBar.class
+com\wireghost\utils\GlobalKeyListenner.class
 com\wireghost\App.class
-com\wireghost\CustomSVGImage.class
-com\wireghost\ImageUtil.class
-com\wireghost\ExpandedSearchBar.class
+com\wireghost\layouts\ExpandedSearchBar.class
+com\wireghost\layouts\SideBar.class
+com\wireghost\utils\ImageUtil.class
+com\wireghost\components\ui\CustomSVGImage.class
+com\wireghost\templates\MediaHub.class
+com\wireghost\layouts\RecentSentFiles.class
